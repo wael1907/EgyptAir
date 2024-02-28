@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Urbanist", sans-serif;
+}
+
+body, .about, .services, .plans, .contact {
+  background: rgb(9, 23, 54);
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.align-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+button.main {
+  background: linear-gradient(120deg, #0e76ca, #2c5488);
+  transition: 0.5s;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  letter-spacing: 2px;
+  border: none;
+  width: 7.5rem;
+  height: 2.5rem;
+}
+button.main:active {
+  color: white;
+}
+button.main:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+section {
+  padding-bottom: 5rem;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  background: url(images/background.png) no-repeat;
+  background-size: cover;
+}
+.hero .navbar {
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.hero .navbar .navbar-brand {
+  padding: 0;
+}
+.hero .navbar .navbar-brand img {
+  width: 9rem;
+}
+.hero .navbar .navbar-toggler {
+  border: 1px solid white;
+  box-shadow: none;
+}
+.hero .navbar .navbar-toggler i {
+  color: white;
+}
+.hero .navbar .nav-link {
+  font-size: 1.2rem;
+  color: white;
+  padding: 1rem 1.5rem !important;
+  position: relative;
+  transition: 0.5s;
+}
+.hero .navbar .nav-link::before {
+  content: "";
+  background-color: white;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: 0.5s;
+  left: 0;
+}
+.hero .navbar .nav-link:hover::before {
+  width: 100%;
+}
+.hero .navbar .btns_login_signup button {
+  font-weight: 500;
+  width: 6rem;
+}
+.hero .navbar .btns_login_signup button.btn-light {
+  color: #2c5488;
+}
+.hero .sentence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.hero .sentence h2 {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1.7px;
+}
+.hero .sentence h2 img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+section.about {
+  padding-top: 5rem;
+}
+section.about .one-about {
+  margin-bottom: 5rem;
+}
+section.about .one-about .plane {
+  display: flex;
+  justify-content: center;
+}
+section.about .one-about .plane img {
+  width: 90%;
+  animation: rotatePlane 120s infinite;
+}
+section.about .one-about .box-text {
+  background: url(images/plane_text.png) no-repeat;
+  background-size: cover;
+  padding: 1.25rem;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  border: 1px solid #2c5488;
+  color: white;
+  border-radius: 5px;
+}
+section.about .two-about .feature-box {
+  background: url("./images/back_aboutextra.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border-left: 7px solid #1c58cf;
+}
+section.about .two-about .feature-box.special {
+  background: url("./images/back_aboutextra2.png") no-repeat;
+  background-size: cover;
+  width: 90%;
+  margin-right: -7rem;
+}
+section.about .two-about .feature-box .small-img {
+  margin-right: 1.5rem;
+}
+section.about .two-about .feature-box .small-img img {
+  width: 150px;
+  border-radius: 15px;
+}
+section.about .two-about .feature-box .text h3 {
+  color: #2c5488;
+  font-weight: bold;
+}
+section.about .two-about .feature-box .text p {
+  color: #092346;
+  font-weight: 500;
+}
+
+section.services .service-box {
+  padding: 1.5rem;
+  border-radius: 5px;
+  background: url("./images/plane_text.png") no-repeat;
+  background-size: cover;
+  text-align: center;
+  border: 1px solid #2c5488;
+  margin-bottom: 1rem;
+}
+section.services .service-box .small-img {
+  margin-bottom: 0.8rem;
+}
+section.services .service-box .small-img img {
+  width: 150px;
+  border-radius: 15px;
+}
+section.services .service-box .text h4 {
+  color: #3790f0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+section.services .service-box .text p {
+  color: white;
+}
+section.services .before-fly {
+  background: url("./images/beforefly.png") no-repeat;
+  background-size: cover;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+section.services .before-fly h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #2c5488;
+}
+section.services .before-fly p.inf {
+  color: #2c5488;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+section.services .before-fly .items .item {
+  transition: 0.5s;
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+section.services .before-fly .items .item:hover {
+  background-color: #2c5488;
+}
+section.services .before-fly .items .item:hover i, section.services .before-fly .items .item:hover p {
+  color: white;
+}
+section.services .before-fly .items .item i {
+  color: #838383;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+section.services .before-fly .items .item p {
+  font-size: 1.2rem;
+  color: #838383;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+section.plans .plan-box {
+  border-radius: 5px;
+  background-color: #11407c;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+section.plans .plan-box .place {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+section.plans .plan-box .place img {
+  border-radius: 5px;
+}
+section.plans .plan-box .from, section.plans .plan-box .to {
+  margin: 0 1rem 0.8rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+}
+section.plans .plan-box .from img, section.plans .plan-box .to img {
+  width: 30px;
+  height: 25px;
+}
+section.plans .plan-box .from img {
+  transform: rotate(-40deg);
+  margin-top: -5px;
+}
+section.plans .plan-box .to img {
+  transform: rotate(40deg);
+}
+section.plans .plan-box .price {
+  font-weight: 600;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+section.contact .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.contact .contact ul {
+  list-style: none;
+  width: 60%;
+}
+section.contact .contact ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #2c5488;
+  padding-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+section.contact .contact ul li a img {
+  width: 30px;
+}
+
+footer {
+  padding: 2rem 0;
+  background: #050f24;
+}
+footer .left .logo-lg {
+  margin-bottom: 1rem;
+}
+footer .left .logo-lg img {
+  width: 300px;
+}
+footer .left p {
+  color: rgb(199, 199, 199);
+}
+footer .middle {
+  display: flex;
+  align-items: center;
+}
+footer .middle ul {
+  list-style: none;
+}
+footer .middle ul li a {
+  color: white;
+  display: block;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  width: 9rem;
+  transition: 0.2s;
+}
+footer .middle ul li a:hover {
+  color: #3790f0;
+}
+footer .right a {
+  margin: 0 0.8rem;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: 0.2s;
+}
+footer .right a:hover {
+  color: #3790f0;
+}
+
+@keyframes rotatePlane {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 992px) {
+  section {
+    padding-bottom: 3rem;
+  }
+  .hero {
+    height: 50vh;
+  }
+  .hero .navbar {
+    background-color: #2c5488;
+    padding: 0.5rem 0;
+  }
+  .hero .navbar .btns_login_signup {
+    padding: 1rem;
+    justify-content: center;
+  }
+  .hero .sentence {
+    display: none;
+  }
+  section.about .one-about .plane {
+    display: none;
+  }
+  section.about .one-about .box-text {
+    font-size: 0.8rem;
+  }
+  section.about .feature-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.about .feature-box.special {
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  section.about .feature-box .small-img {
+    margin-bottom: 1rem;
+  }
+  section.about .feature-box .small-img img {
+    width: 70px !important;
+  }
+  section.about .feature-box .text {
+    text-align: center;
+  }
+  section.about .feature-box .text h3 {
+    margin-bottom: 1rem;
+  }
+  section.services .before-fly {
+    background: rgb(199, 199, 199);
+  }
+  section.services .before-fly h2 {
+    font-size: 2rem;
+  }
+  section.services .before-fly p {
+    font-size: 0.8rem;
+  }
+  section.services .before-fly .item i {
+    font-size: 2.5rem !important;
+  }
+  section.contact .col-lg-4 {
+    display: none;
+  }
+  section.contact .contact {
+    justify-content: flex-start;
+  }
+  section.contact .contact ul {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  section.contact .contact ul li a {
+    width: 100% !important;
+    font-size: 1rem;
+  }
+  section.contact .contact ul li a img {
+    width: 20px;
+  }
+  footer .left {
+    margin-bottom: 2rem;
+  }
+  footer .left, footer .middle, footer .right {
+    text-align: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */
